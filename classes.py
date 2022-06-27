@@ -1,21 +1,31 @@
 from enum import Enum
 
-# V1-16
+# V1-15
 class V(Enum):
     V1 = 1
     V2 = 2
     V3 = 3
     V4 = 4
     V5 = 5
+    V6 = 6
+    V7 = 7
+    V8 = 8
+    V9 = 9
+    V10 = 10
+    V11 = 11
+    V12 = 12
+    V13 = 13
+    V14 = 14
+    V15 = 15
 
 # Basic Stats eines Kletterers.
 class BasicStats(Enum):
+    FINGER_STRENGTH = 0
     STRENGTH = 1
     BALANCE = 2
     AGILITY = 3
     FOOTWORK = 4
     PRECISION = 5
-    FINGER_STRENGTH = 6
 
 
 # Skills die ein Kletterer erlernen kann -> hier sammelt er Erfahrung

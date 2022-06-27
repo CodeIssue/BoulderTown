@@ -8,8 +8,6 @@ from wall import *
 from boulder import *
 
 class RouteSetter:
-    def __init__(self, skill_level = 5):
-        self.skill = skill_level
-
-    def set_wall(self, wall:Wall, v = V.V1):
-        wall.boulders = [Boulder(V.V1, self.skill) for _ in wall.list_of_terrain]
+    def __init__(self, skill_level = 5, max_skill = 8):
+        self.skill = skill_level        # skill als Route-setter.
+        self.max_skill = max_skill      # kann routen bis zu dem Skill schrauben

@@ -7,7 +7,7 @@ class Boulder:
         assert isinstance(v, V), "wrong type"
         # assert type(rs_skill_level) == int
 
-        self.num_of_moves = random.randint(2, 20)
+        self.num_of_moves = random.randint(8, 12)
         self.boulder_v = v
         self.boulder_type = random.choice(list(Terrain))
         self.moves = [_Move(self.boulder_v, rs_skill_level) for _ in range(self.num_of_moves)]

@@ -10,17 +10,29 @@ Player
 from classes import *
 
 class Player:
-    def __init__(self):
-        self.strength = 10
-        self.balance = 10
-        self.foot_technique = 10
-        self.fatigue = 0
-    
+    def __init__(self, name):
+        assert len(name) > 2, "Die Eingabe ist zu kurz"
+        assert len(name) < 20, "Die Eingabe ist zu lang"
+
+        self.name = name
+        self.energy = 100
+        self.basic_attributes = dict()
+
+        for stat in list(BasicStats):
+            self.basic_attributes[stat.name] = 10
+
+
     def __repr__(self):
-        return f"""STR: {self.strength}
-BLC: {self.balance}
-FTT: {self.foot_technique}
-FATIGUE: {self.fatigue}"""
+        res = f"Name: {self.name}\n"
+        
+        res = f"Energie: {self.energy}\n"
+
+        res += f"Basic Attributes:\n\n"
+        for key in self.basic_attributes:
+            res += f"{key} : {self.basic_attributes[key]}\n"
+
+
+        return res
 
     # def climb(self, boulder:_Boulder):
     #     for (number, move) in enumerate(boulder.moves): 

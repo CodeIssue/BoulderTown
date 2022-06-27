@@ -1,4 +1,5 @@
 import random
+from boulder import Boulder
 
 from classes import *
 """
@@ -12,9 +13,16 @@ Wall
 
 
 class Wall:
-    def __init__(self, v = V.V1):
-        self.space = 10
-        self.list_of_terrain = [random.choice(list(Terrain)) for _ in range(self.space)]
+    def __init__(self, id, space = random.randint(5,15)):
+        self.id = id
+        self.space = space
+        self.terrain = random.choice(list(Terrain))
         self.boulders = []
 
+    def __repr__(self) -> str:
+        res = f"Wand-ID : {self.id}\n"
+        res += f"Maximale Anzahl Boulder : {self.space}\n"
+        res += f"Art der Wand : {self.terrain.name}\n"
+
+        return res
 
