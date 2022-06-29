@@ -1,6 +1,7 @@
-from enum import Enum
+from enum import Enum, unique
 
 # V1-15
+@unique
 class V(Enum):
     V1 = 1
     V2 = 2
@@ -19,6 +20,7 @@ class V(Enum):
     V15 = 15
 
 # Basic Stats eines Kletterers.
+@unique
 class BasicStats(Enum):
     FINGER_STRENGTH = 0
     STRENGTH = 1
@@ -29,6 +31,7 @@ class BasicStats(Enum):
 
 
 # Skills die ein Kletterer erlernen kann -> hier sammelt er Erfahrung
+@unique
 class Skills(Enum):
     SLAB_BALANCE = 1
     ROOF = 2
@@ -39,6 +42,7 @@ class Skills(Enum):
     
 
 # Wand-typ -> Modifikatoren für Technik
+@unique
 class Terrain(Enum):
     SLAB = 1
     VERTICAL = 2
